@@ -1,0 +1,51 @@
+{
+  "name": "snappy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "concurrently \"npm:build:*\"",
+    "build:js": "NODE_ENV=production rollup --config",
+    "build:images": "node image-bundler.mjs",
+    "dev": "dvlp src --transpiler scripts/transpile.js --port 3838",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "cssnano": "^4.1.10",
+    "dvlp": "^8.4.0",
+    "postcss": "^7.0.31",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.7",
+    "sucrase": "^3.15.0",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.10.1",
+    "concurrently": "^5.2.0",
+    "fastify": "^2.14.1",
+    "fastify-static": "^2.7.0",
+    "glob": "^7.1.6",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "ionicons": "^5.0.1",
+    "lit-html": "^1.2.1",
+    "mitt": "^1.2.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "rollup": "^2.12.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "tailwindcss": "^1.4.6"
+  }
+}

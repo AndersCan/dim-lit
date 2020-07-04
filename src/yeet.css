@@ -1,0 +1,43 @@
+.yeet-container {
+  width: 100%;
+  height: 20px;
+}
+.yeet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 100%;
+
+  white-space: nowrap;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='red' font-size='20'>TRØKK</text></svg>");
+}
+
+.yeet-1 {
+  animation: yeeet 10s linear 0s infinite;
+}
+.yeet-2 {
+  animation: yeeet2 4s linear infinite;
+  width: 100%;
+}
+
+@keyframes yeeet {
+  0% {
+    transform: translateX(0);
+    /* opacity: 0; */
+  }
+  /* 3% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  99.5% {
+    transform: translateX(-100vw);
+    opacity: 1;
+  } */
+  100% {
+    transform: translateX(-100vw);
+    /* opacity: 0; */
+  }
+}
